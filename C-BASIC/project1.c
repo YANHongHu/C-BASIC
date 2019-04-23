@@ -2,30 +2,22 @@
 #include<stdlib.h>
 
 main() {
-	int a[10] = { 10,3,4 };
-		if (a[0] > a[1]) {
-			if (a[0] > a[2]) {
-				printf("%d ", a[0]);
-				if (a[1] > a[2]) {
-					printf("%d %d", a[1], a[2]);
-				}
-				else
-					printf("%d %d", a[2], a[1]);
-			}
-			else printf("%d %d %d", a[2],a[0],a[1]);
+	int num1, num2;
+	int i;
+	printf("请输入两个整数");
+	scanf_s("%d %d", &num1, &num2);
+	if (num1 > num2) {
+		for (i = 0; num1%num2 != 0; i++) {
+				num2 = num1 % num2;
 		}
-		else {
-			if (a[1] > a[2]) {
-				printf("%d ", a[1]);
-				if (a[2] > a[0]) {
-					printf("%d %d", a[2], a[0]);
-				}
-				else
-					printf("%d %d", a[0], a[2]);
-			}
-			else
-				printf("%d %d %d", a[2], a[1, a[0]]);
+		printf("%d\n", num2);
+	}
+	else {
+		for (i = 0; num1%num2!= 0; i++) {
+			num1 = num2 % num1;
 		}
+		printf("%d\n",num1);
+	}
 	system("pause");
 	return 0;
 }
