@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-
 main() {
 	int num1, num2;
 	int i;
