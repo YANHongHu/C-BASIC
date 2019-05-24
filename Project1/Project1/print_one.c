@@ -4,11 +4,9 @@
 int count_one_bits( int value)
 {
 	int count = 0;
-	int flag = 0;
-	for (; flag < 32;flag++){
-		if ((value >> flag & 1)== 1) {
-			count++;
-		}
+	while(value!=0){
+		value = value & (value - 1);
+		count++;
 	}
 	return count;
 }
